@@ -38,7 +38,7 @@ What you get
 
 * [HTML5 Ready](https://github.com/yckart/compass-kube/blob/master/index.html)
 * [Typography](https://github.com/yckart/compass-kube/blob/master/sass/_typo.scss)
-* [Grid](https://github.com/yckart/compass-kube/blob/master/sass/_mixins.scss)
+* [Grid](https://github.com/yckart/compass-kube/blob/master/sass/_grid.scss)
 * [Forms](https://github.com/yckart/compass-kube/blob/master/sass/_forms.scss)
 * [Tables](https://github.com/yckart/compass-kube/blob/master/sass/_tables.scss)
 * [Goodies](https://github.com/yckart/compass-kube/blob/master/sass/_goodies.scss)
