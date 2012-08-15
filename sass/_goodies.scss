@@ -1,0 +1,119 @@
+/* =Goodies
+-----------------------------------------------------------------------------*/
+.image-left {
+	float: left;
+	margin: 0 $floatingMargin $floatingMargin 0;
+}
+.image-right {
+	float: right;
+	margin: 0 0 $floatingMargin $floatingMargin;
+}	
+.image-left img, .image-right img {
+	position: relative;
+	top: .4em;
+}
+p.lead {
+	font-size: $bigFontSize;  
+}
+.supersmall {
+	font-size: $superSmallFontSize;
+}
+.small {
+	font-size: $smallFontSize;
+}
+.big {
+  font-size: $bigFontSize;
+}
+input.big {
+  padding: 2px 0;
+  font-size: $bigFontSize;  
+}
+.text-centered {
+	text-align: center;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.clear {
+	clear: both;
+}
+.last {
+	margin-right: 0 !important;
+}
+.end {
+	margin-bottom: 0 !important;
+}
+.handle {
+	cursor: move;
+}
+.normal {
+	font-weight: normal;
+}
+.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+.req, .required {
+	font-weight: normal;
+	color: $colorRed;
+}
+.highlight {
+	background-color: #e5ecf5 !important;
+}
+
+/* Width */
+.width-33 {
+  width: 33%;
+}
+.width-50 {
+  width: 50%;
+}
+.width-100 {
+  width: 100%;
+}
+input.width-100 {
+  width: 98.6%;
+}
+textarea.width-100 {
+  width: 99.4%;
+}
+select.width-100 {
+  width: 99.4%;
+}
+
+/* Colors */
+.black {
+	color: $colorBlack;
+}
+.gray-dark {
+	color: $colorGrayDark;
+}
+.gray {
+	color: $colorGray;
+}
+.gray-light {
+	color: $colorGrayLight;
+}
+.white {
+	color: $colorWhite;
+}
+.red, .error {
+	color: $colorRed;
+}
+.green, .success { 
+	color: $colorGreen;
+}
+
+/* Link Colors Hover */
+a.white:hover {
+	color: darken($colorWhite, 15%);
+	color: rgba(255, 255, 255, .8);
+}
+a.green:hover, a.red:hover, a.error:hover  {
+	color: $colorBlack;
+}

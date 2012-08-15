@@ -1,0 +1,149 @@
+
+/* =Grid
+-----------------------------------------------------------------------------*/
+.row {
+	margin-bottom: ($baseLine/$em) * 1em;
+}
+.container.row {
+	margin-bottom: 0;
+}
+.container:after, .row:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.half, 
+.third, 
+.quarter, 
+.fifth, 
+.sixth, 
+.twothird, 
+.twofifth, 
+.threefifth, 
+.fourfifth, 
+.fivesixth,
+.threequarter {
+	margin-left: $gridGutterWidth/($gridWidth/100)*1%;
+	float: left;
+	min-height: 1px;
+}
+.half:first-child, 
+.third:first-child, 
+.quarter:first-child, 
+.fifth:first-child, 
+.sixth:first-child, 
+.twothird:first-child, 
+.twofifth:first-child, 
+.threefifth:first-child, 
+.fourfifth:first-child, 
+.fivesixth:first-child,
+.threequarter:first-child {
+	margin-left: 0; 
+}
+
+.sixth 		  { @include column(6); }
+.fifth 		  { @include column(5); } 
+.quarter 	  { @include column(4); } 
+.third 		  { @include column(3); } 
+.half 		  { @include column(2); } 
+
+.threequarter { @include columns(3, 4); }
+.twothird 	  { @include columns(2, 3); }
+.twofifth 	  { @include columns(2, 5); }
+.threefifth   { @include columns(3, 5); }
+.fourfifth 	  { @include columns(4, 5); }
+.fivesixth 	  { @include columns(5, 6); }
+
+
+.push-half,
+.push-threequarter,
+.push-quarter,
+.push-third,
+.push-twothird,
+.push-fifth,
+.push-twofifth,
+.push-threefifth, 
+.push-fourfifth,
+.push-sixth,
+.push-fivesixth {
+	position: relative;
+}
+
+
+.push-half         { @include column-push(2); }
+.push-third        { @include column-push(3); }
+.push-quarter      { @include column-push(4); }
+.push-fifth        { @include column-push(5); }
+.push-sixth        { @include column-push(6); }
+
+.push-threequarter { @include columns-push(3, 4); }
+.push-twothird     { @include columns-push(2, 3); }
+.push-twofifth     { @include columns-push(2, 5); }
+.push-threefifth   { @include columns-push(3, 5); }
+.push-fourfifth    { @include columns-push(4, 5); }
+.push-fivesixth    { @include columns-push(5, 6); }
+
+
+.split .half, 
+.split .third, 
+.split .quarter, 
+.split .fifth, 
+.split .sixth, 
+.split .twothird, 
+.split .twofifth, 
+.split .threefifth, 
+.split .fourfifth, 
+.split .fivesixth,
+.split .threequarter {
+	margin-left: 0;	
+	
+}
+
+.split .half         { width: 50%;   }
+.split .threequarter { width: 75%;   }
+.split .quarter      { width: 25%;   }
+.split .third        { width: 33.3%; }
+.split .twothird     { width: 66.6%; }
+.split .fifth        { width: 20%;   }
+.split .twofifth     { width: 40%;   }
+.split .threefifth   { width: 60%;   }
+.split .fourfifth    { width: 80%;   }
+.split .sixth        { width: 16.6%; }
+.split .fivesixth    { width: 83.4%; }
+
+.inner {
+	padding: ($baseLine/$em) * 1em;
+}
+.inner-left {
+	padding-left: ($baseLine/$em) * 1em;
+}
+.inner-right {
+	padding-right: ($baseLine/$em) * 1em;
+}
+.inner-nobottom {
+	padding-bottom: 1px;
+}
+.inner-double {
+	padding: ($baseLine*2)/$em * 1em;
+}
+.inner-double-left {
+	padding-left: ($baseLine*2)/$em * 1em;
+}
+.inner-double-right {
+	padding-right: ($baseLine*2)/$em * 1em;
+}
+.inner-double-nobottom {
+	padding-bottom: 1px;
+}
+
+.row .push-right {
+	float: right;
+}
+
+.row .centered { 
+	float: none; 
+	margin: 0 auto; 
+}

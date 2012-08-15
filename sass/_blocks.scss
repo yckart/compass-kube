@@ -1,0 +1,27 @@
+/* =Blocks
+-----------------------------------------------------------------------------*/
+.block-two,
+.block-three,
+.block-four,
+.block-five,
+.block-six {
+	list-style: none;
+	margin-left: -$gridGutterWidth/($gridWidth/100)*1%;
+	margin-bottom: 0;
+	@include clearfixing;
+}
+.block-two > li,
+.block-three > li,
+.block-four > li,
+.block-five > li,
+.block-six > li { 
+	height: auto; 
+	float: left; 
+	margin-bottom: ($baseLine/$em) * 1em;
+	margin-left: $gridGutterWidth/($gridWidth/100)*1%;	
+}
+.block-two > li   {	@include block(2); }
+.block-three > li { @include block(3); }
+.block-four > li  { @include block(4); }
+.block-five > li  { @include block(5); }
+.block-six > li   { @include block(6); }

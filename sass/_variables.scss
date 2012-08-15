@@ -1,0 +1,65 @@
+// Font
+$baseFontFamily: Helvetica, Arial, Tahoma, sans-serif;
+$inputFontFamily: Helvetica, Arial, Tahoma, sans-serif;
+$codeFontFamily: monospace, sans-serif;
+ 
+// Type
+$baseFontSize: 14;
+$baseLine: 21; // e.g. baseFontSize * 1.5
+
+// Heading
+$h1: 36;
+$h2: 30;
+$h3: 24;
+$h4: 18;
+$h5: 16;
+$h6: 14;
+
+// Grid
+$gridWidth: 940;
+$gridGutterWidth: 30;
+
+// Misc sizes
+$listsLeft: 2em;
+$columnarWidth: 150px;
+$columnarMargin: 20px;
+
+// Font sizes
+$bigFontSize: 1.2em;
+$smallFontSize: 0.85em;
+$superSmallFontSize: 0.7em;
+
+
+// FloatingImages
+$floatingMargin: 1em;
+$floatingBackgroundColor: #fff;
+$floatingPadding: 0;
+$floatingBorder: none;	
+
+// LinkColor
+$colorLink: #369;
+$colorLinkHover: #900;
+
+// TextColor
+$colorBlack: #000;
+$colorGrayDark: #555;
+$colorGray: #777;
+$colorGrayLight: #999;
+$colorWhite: #fff;
+$colorRed: #da3e5a;
+$colorGreen: #18a011;
+
+// BackgroundColor
+$markBackgroundColor: #fe5;
+$codeBackgroundColor: #f8f8f8;
+$tfootBackgroundColor: #f2f2f2;
+$colorStripedTable: #f8f8f8;
+$colorHoveredTable: #f6f6f6;
+
+// Borders
+$cellBorder: 1px solid #eee;
+$cellBorderDark: 1px solid #ddd;
+$fieldsetBorder: 1px solid #ddd;
+
+// Util
+$em: $baseFontSize;	// outputting ems, e.g. 14/$em

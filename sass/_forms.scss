@@ -1,0 +1,213 @@
+/* =Forms
+-----------------------------------------------------------------------------*/
+.forms label {
+	display: block;
+	margin-bottom: 2px;
+}
+.descr {
+	color: $colorGrayLight; 
+	font-size: $smallFontSize; 
+	line-height: ($baseLine/$em) * 1em;
+}
+div.descr {
+	margin: 4px 0;
+}
+.columnar div.descr { 
+	margin-bottom: 10px;
+}
+.forms ul {
+    list-style: none;
+    margin: 0;
+}
+.forms ul li {
+    margin-bottom: 10px;
+}
+.forms.columnar ul li {
+    margin-bottom: 15px;
+}
+
+/* liner fieldset */
+fieldset.liner {
+	border: none;
+	padding: 0;
+}
+fieldset.liner legend {
+	padding: 0;
+	width: 100%;
+	padding-bottom: 12px;		
+}
+fieldset.liner legend span {
+	padding: 0;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #eee;
+	display: block;	
+}
+/* multicolumn */
+.forms .multicolumn {
+	@include clearfixing();
+}
+.forms .multicolumn li {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 0;
+	line-height: 1.8em;
+}
+.forms .multicolumn li label {
+	margin-bottom: 0;
+}
+.forms .multicolumn li.width-50 {
+	width: 48%;
+	margin-right: 2%;
+}
+.forms .multicolumn li.width-33 {
+	width: 31%;
+	margin-right: 2%;	
+}
+/* columnar */
+.forms.columnar legend {
+	margin-bottom: 1em;
+}
+.forms.columnar label  {
+	float: left;
+	width: $columnarWidth;
+	text-align: right;
+	margin-right: $columnarMargin;
+}
+.forms.columnar .push, .forms.columnar div.descr {
+	margin-left: $columnarWidth + $columnarMargin;
+}
+.forms.columnar li fieldset label {
+	float: none;
+	width: auto;
+	text-align: left;
+	margin-right: 0;
+}
+.forms.columnar li fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+	padding-left: $columnarWidth + $columnarMargin;
+	position: relative;
+}
+.forms.columnar li fieldset section {
+	padding: 0;
+	position: absolute;
+	width: $columnarWidth;
+	text-align: right;
+	left: 0;
+	top: 0;
+}
+.forms.columnar li fieldset div.descr {
+	margin-left: 0;
+}
+
+
+/* section */
+.forms li.form-section {
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+	padding: 1.5em 0 .7em 0;
+	font-size: 1.1em;
+	margin-bottom: 1.5em;
+}
+.columnar li.form-section {
+	padding-left: $columnarWidth + $columnarMargin;
+}
+
+
+/* tableforms */
+table.tableforms td {
+	font-size: 90%;
+	padding: 1px 10px 3px 0 !important;
+	border: none;
+}
+table.tableforms tr.labels td {
+	padding-top: .8em !important;
+	font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	position: relative;
+	top: -1px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"], 
+textarea {
+	position: relative;
+	z-index: 2;
+	font-family: $inputFontFamily;
+	height: 23px;
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 1px 2px;
+	background-color: white;
+	color: #333;
+	font-size: 13px;
+	line-height: 1;
+	border-radius: 1px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .2) inset;	
+	@include transition(border .3s ease-in);
+}
+textarea {
+	line-height: 1.4em;
+}
+
+/* Errors and Success */
+.error, 
+.success { 
+	margin-left: 5px; 
+	font-weight: normal; 
+	font-size: $smallFontSize; 
+}
+input.input-error, textarea.input-error, select.input-error, .input-error {
+	border-color: #da3e5a;
+	box-shadow: 0 0 0 2px rgba(218, 62, 90, .3),0 1px 2px rgba(0, 0, 0, .2) inset;  
+
+}
+input.input-success, textarea.input-success, select.input-success, .input-success  {
+	border-color: #18a011 ;
+	box-shadow: 0 0 0 2px rgba(24, 160, 17, .3),0 1px 2px rgba(0, 0, 0, .2) inset;  
+}
+input.input-gray, textarea.input-gray, select.input-gray, .input-gray  {
+	border-color: #ccc;
+	box-shadow: 0 0 0 2px rgba(204, 204, 204, .3),0 1px 2px rgba(0, 0, 0, .2) inset;  
+}
+
+input:focus, textarea:focus {
+	outline: none;
+	border-color: #5ca9e4;
+	box-shadow: 0 0 0 2px rgba(70, 161, 231, .3), 0 1px 2px rgba(0, 0, 0, .2) inset; 	
+
+	
+}
+input.input-search {
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 0;
+	border-radius: 15px;
+}
+.input-append, .input-prepend {
+	display: inline-block;
+	background-color: #eee;
+	height: 25px;
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 1px 8px;
+	color: #333;
+	font-size: 14px;
+	line-height: 25px;
+}
+.input-prepend {
+	margin-right: -1px;
+}
+
+.input-append {
+	position: relative;
+	z-index: 1;
+	margin-left: -1px;
+}
+
+

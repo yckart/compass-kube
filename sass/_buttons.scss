@@ -1,0 +1,138 @@
+.btn {
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1;
+	font-size: 13px;
+	font-weight: normal;
+	padding: 7px 16px;
+	border-radius: 4px;		
+
+	@include gradient(#fff, #e1e1e1);
+	border: 1px solid #dadada;	
+	border-left: 1px solid #d2d2d2;	
+	border-right: 1px solid #d2d2d2;			
+	border-bottom-color: #a9a9a9;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .15), inset 0 1px 1px 0 rgba(255, 255, 255, 0.6);	
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 1);
+}
+.btn, .btn:hover {
+	color: #000;
+}
+.btn:hover {
+	filter: none;
+	background: none;
+	background: #efefef;
+	text-shadow: 0 1px 0px rgba(255, 255, 255, .8);		
+	text-decoration: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+}
+
+
+/* Active  */
+.btn-big.btn-active, .btn-big.btn-active:hover {
+	padding: 11px 25px;
+}
+.btn-active, .btn-active:hover {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .4) inset;	
+	color: #555;
+	border: none;
+	background: none;
+	filter: none;
+	background-color: #ddd;	
+	text-shadow: 0 1px 0px rgba(255, 255, 255, .8);
+	padding: 8px 17px;		
+}
+
+
+/* Small */
+.btn-small {
+	padding: 4px 12px;
+	font-size: 11px;
+}
+.btn-small.btn-active {
+	padding: 5px 12px;
+}
+
+/* Big */
+.btn-big {
+	padding: 10px 24px;
+	font-size: 20px;
+}
+
+
+/* Square */
+.btn-square {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;	
+}
+
+/* Round */
+.btn-round {
+	border-radius: 15px;		
+	border-radius: 0 \0; /* ie9 hack */ 
+}
+
+/* Full */
+.btn-full {
+	width: 100%;
+}
+
+
+/* Group  */
+.btn-group {
+	display: inline-block;
+	margin-right: 2px;
+	@include clearfixing();
+	vertical-align: bottom;
+}
+.btn-group > .btn, .btn-group > input {
+	float: left;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	margin-left: -1px;	
+}
+.btn-group > .btn:first-child {
+	border-radius: 4px 0 0 4px;	
+}
+.btn-group > .btn:last-child {
+	border-radius: 0 4px 4px 0;
+}
+.btn-group > .btn.btn-round:first-child, .btn-group > .input-search:first-child {
+	border-radius: 15px 0 0 15px;	
+}
+.btn-group > .btn.btn-round:last-child, .btn-group > .input-search:last-child {
+	border-radius: 0 15px 15px 0;
+}
+
+
+/* Append  */
+.btn-append {
+	margin-left: -2px;
+	border-radius:  0 4px 4px 0;
+}
+
+
+/* Disabled  */
+.btn.disabled, 
+.btn[disabled] {
+	border: none;
+	filter: none;	
+	background: none;
+	background-color: #e9e9e9;
+	opacity: 0.6; 
+	cursor: default; 
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .6);	
+}
+
+
+/* FF fix */
+@-moz-document url-prefix("http://") {
+	input[type=submit].btn::-moz-focus-inner, button.btn::-moz-focus-inner { border: 0; padding: 0; }
+}

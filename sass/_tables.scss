@@ -1,0 +1,41 @@
+/* =Tables
+-----------------------------------------------------------------------------*/
+table caption {
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-left: 0.5em;
+	color: #666;
+}
+table.simple td,
+table.simple th {
+  border: none;
+  padding: (($baseLine / 2) / $em) * 1em 0.7em (($baseLine / 2) / $em) * 1em 0;
+}
+table.bordered td,
+table.bordered th {
+  border: 1px solid #ddd;
+}
+table.stroked td,
+table.stroked th {
+  border-bottom: 1px solid #eee;
+}
+table.striped tbody tr:nth-child(odd) td {
+  background-color: #f8f8f8;
+}
+table.hovered tbody tr:hover td, table.hovered thead tr:hover th {
+	background-color: $colorHoveredTable;
+}
+
+.thead-gray td, .thead-gray th {
+	background-color: #f0f0f0;
+}
+.thead-black td, .thead-black th {
+	font-weight: normal;	
+	color: #f6f6f6;
+	color: rgba(255, 255, 255, .9);
+	background-color: #222;
+}
+table.bordered .thead-black td,
+table.bordered .thead-black th {
+	border: 1px solid #444;	
+}
