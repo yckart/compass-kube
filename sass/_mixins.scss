@@ -1,69 +1,78 @@
-// Dropshadows
-@mixin box-shadow($shadow: 0 1px 3px #999) {
-  -webkit-box-shadow: $shadow;
-     -moz-box-shadow: $shadow;
-          box-shadow: $shadow;
-}
-
-@mixin box-shadow-inset($shadow: 0 1px 3px #999 inset) {
-  -webkit-box-shadow: $shadow;
-     -moz-box-shadow: $shadow;
-          box-shadow: $shadow;
-}
-
 @mixin gradient($startColor: #555, $endColor: #333) {
-    background-color: mix($startColor, $endColor, 60%);
-    background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
-    background-image: -ms-linear-gradient(top, $startColor, $endColor); // IE10
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
-    background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
-    background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
-    background-image: linear-gradient(top, $startColor, $endColor); // The standard
-    filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$startColor}, endColorstr=#{$endColor}, GradientType=0)"; // IE9 and down
+    @include filter-gradient($startColor, $endColor);
+    @include background-image(linear-gradient($startColor, $endColor));
 }
 
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-      -ms-transition: $transition;
-       -o-transition: $transition;
-          transition: $transition;
+@mixin selection($r, $g, $b) {
+	::selection {
+		background: rgb($r, $g, $b);
+	}
+	::-moz-selection {
+		background: rgb($r, $g, $b);
+	}
+	img::selection {
+		background: transparent;
+	}
+	img::-moz-selection {
+		background: transparent;
+	}
 }
 
-
-// BorderRadius
-@mixin border-radius($radius: 5px) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-          border-radius: $radius;
+@mixin placeholder($color: $input-color-placeholder) {
+  :-moz-placeholder            { color: $color; } // Firefox 4-18
+  ::-moz-placeholder           { color: $color; } // Firefox 19+
+  :-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+  ::-webkit-input-placeholder  { color: $color; padding: 2px; } // Safari and Chrome
 }
 
-@mixin clearfixing() {
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+// Colors
+$black-10: darken(#fff, 10%);
+$black-20: darken(#fff, 20%);
+$black-30: darken(#fff, 30%);
+$black-40: darken(#fff, 40%);
+$black-50: darken(#fff, 50%);
+$black-60: darken(#fff, 60%);
+$black-70: darken(#fff, 70%);
+$black-80: darken(#fff, 80%);
+$black-90: darken(#fff, 90%);
+
+// Retina
+@mixin image-retina-image($image) {
+  background-image: image-url($image);
+
+  // If we have a retina image then add styles for it too
+  @if file_exists(retina_filename($image)) {
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   -moz-min-device-pixel-ratio: 2),
+    only screen and (    -ms-min-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+      @include background-size(image-width($image) auto);
+      background-image: image-url(retina_filename($image));
+    }
   }
 }
 
+// Grid
 @mixin block($num) {
-  width: (($gridWidth - ($gridGutterWidth * $num)) / $num / ($gridWidth / 100)) * 1%;
+	width: (($gridWidth - ($gridGutterWidth * $num)) / $num / ($gridWidth / 100)) * 1%;
 }
 
 @mixin column($num) {
-  width: (($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * 1%;
+	width: (($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * 1%;
 }
 
 @mixin columns($factor, $num) {
-  width: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) * 1%;
+	width: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) * 1%;
 }
 
 @mixin column-push($num) {
-  left: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) + $gridGutterWidth/($gridWidth/100)) * 1%;
+	left: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) + $gridGutterWidth/($gridWidth/100)) * 1%;
 }
 
 @mixin columns-push($factor, $num) {
-  left: (((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) + $gridGutterWidth/($gridWidth/100)) * 1%;
+	left: (((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) + $gridGutterWidth/($gridWidth/100)) * 1%;
 }

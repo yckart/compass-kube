@@ -1,0 +1,22 @@
+/* =Tablet and Desktop
+-----------------------------------------------------------------------------*/
+@media (min-width: 768px) {
+
+	.desktop-hide {
+		display: none;
+	}
+
+}
+
+/* =Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+
+	.mobile-text-centered {
+		text-align: center;
+	}
+	.mobile-hide {
+		display: none;
+	}
+
+}

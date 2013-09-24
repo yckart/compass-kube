@@ -1,30 +1,35 @@
 /*
-	Kube Professional CSS-framework
-	
-	Copyright (c) 2012, Imperavi Inc.
-	Ported to SCSS & Compass by Yannick Albert (http://yckart.com/)
+	Kube Professional CSS-framework Version 2.0.0
+
+	Copyright (c) 2013, Imperavi Inc.
 
 	http://imperavi.com/kube/
-	https://github.com/yckart/compass-kuve/
-	
-	License: free
-
 */
+
+@import "compass";
 @import "variables";
 @import "mixins";
 
-@import "base";
+@import "reset";
 @import "typo";
-
+@import "code";
 @import "tables";
+@import "lists";
 @import "forms";
-
+@import "colors";
+@import "labels";
 @import "buttons";
+@import "helpers";
+@import "images";
+@import "navs";
+@import "messages";
 
 @import "grid";
 @import "blocks";
 
-@import "goodies";
-
-
-@import "responsive";
+@import "responsive-utils";
+@import "responsive-media";
+@import "responsive-grid";
+@import "responsive-blocks";
+@import "responsive-navs";
+@import "responsive-forms";

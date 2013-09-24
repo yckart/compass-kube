@@ -1,0 +1,69 @@
+.label,
+.label-badge {
+	@include border-radius(2em);
+	border: 1px solid #ddd;
+	font-size: .7em;
+	@include inline-block;
+	position: relative;
+	top: -1px;
+	line-height: 1;
+	padding: 3px 8px;
+	color: #000;
+	background-color: #fff;
+	text-decoration: none;
+}
+.label-badge {
+	top: -4px;
+	left: -1px;
+}
+.label-data {
+	color: $colorGrayLight;
+	background: none;
+	border: none;
+	padding: 0;
+}
+a.label:hover {
+	color: #000;
+	@include opacity(60);
+}
+.label-black {
+	background-color: #000;
+}
+.label-red {
+	background-color: #ef6465;
+}
+.label-orange {
+	background-color: #f48a30;
+}
+.label-green {
+	background-color: #90af45;
+}
+.label-blue {
+	background-color: #1c7ab4;
+}
+.label-yellow {
+	background-color: #f3c835;
+}
+.label-black,
+.label-red,
+.label-orange,
+.label-green,
+.label-blue,
+.label-yellow {
+	border: none;
+	color: #fff;
+	padding: 4px 8px;
+}
+
+a.label-black:hover,
+a.label-red:hover,
+a.label-orange:hover,
+a.label-green:hover,
+a.label-blue:hover,
+a.label-yellow:hover {
+	color: #fff;
+}
+.label-small {
+	font-size: .6em;
+	padding: 3px 5px;
+}

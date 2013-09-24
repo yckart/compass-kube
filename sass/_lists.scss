@@ -1,0 +1,29 @@
+/* =Lists
+-----------------------------------------------------------------------------*/
+
+
+// Simple
+.lists-simple {
+	margin-left: 0;
+	list-style: none;
+}
+.lists-simple ul,
+.lists-simple ol {
+	list-style: none;
+	margin-left: 1.5em;
+}
+
+
+// Dash
+.lists-dash {
+	margin-left: 18px;
+}
+.lists-dash li {
+	list-style-type: none;
+}
+.lists-dash li:before{
+	content: "\2013";
+	position: relative;
+	margin-left: -10px;
+	left: -7px;
+}

@@ -1,0 +1,50 @@
+/* =Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+
+	.nav-h,
+	.nav-h ul,
+	.nav-h ul li,
+	.nav-h,
+	.nav-g,
+	.nav-g ul,
+	.nav-g ul li,
+	.nav-g,
+	.nav-v ul,
+	.nav-v,
+	.nav-tabs ul,
+	.nav-pills,
+	.nav-pills ul {
+		float: none;
+	}
+	.nav-h ul li,
+	.nav-g ul li {
+		margin: 0;
+		margin-bottom: 1px;
+	}
+
+	.nav-tabs ul li {
+		float: none;
+		margin-right: 0;
+	}
+	.nav-tabs ul li a,
+	.nav-tabs ul li span,
+	.nav-tabs ul li .active	 {
+		margin-top: 0;
+		bottom: 0;
+		padding: 8px 12px 9px 12px;
+		border: 1px solid #ddd;
+		border-bottom: none;
+	}
+
+	.nav-tabs-v {
+		border-bottom: 1px solid #ddd;
+		border-right: none;
+	}
+	.nav-tabs-v ul li span {
+		margin-top: 0;
+		bottom: 0;
+		margin-right: 0;
+	}
+
+}

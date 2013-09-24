@@ -1,0 +1,233 @@
+@import "kube";
+
+/* =Selection
+-----------------------------------------------------------------------------*/
+@include selection(255,255,158);
+
+
+/* =Layout
+-----------------------------------------------------------------------------*/
+body {
+	font-family: 'Lato', sans-serif;
+	border-top: 5px solid #222;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Lato', sans-serif;
+}
+#page {
+	width: 82%;
+	padding: 0 10px 63px 10px;
+	margin: 16px auto 0 auto;
+}
+#path {
+	font-size: 12px;
+	color: #888;
+}
+#path span {
+	margin: 0 4px;
+}
+#path a {
+	color: #666;
+	background-color: #f2f2f2;
+	@include inline-block;
+	padding: 3px 10px 2px 10px;
+	@include border-radius (15px);
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+#path a:hover {
+	background-color: #ef6465;
+	color: #fff;
+}
+#footer {
+	margin: 3em 0;
+	padding-bottom: 63px;
+	text-align: center;
+}
+#header {
+	padding: 88px 0 88px 0;
+}
+#header h1 {
+	text-align: center;
+	font-weight: normal;
+	margin: 0;
+}
+#preview li a {
+	padding-top: 9px;
+	padding-bottom: 8px;
+}
+
+/* =Demo
+-----------------------------------------------------------------------------*/
+.preview {
+	padding: 2em 2em 1.5em 2em;
+	border: 1px dashed #ddd;
+	margin-bottom: 1.5em;
+}
+.swatch {
+	@include inline-block;
+	@include border-radius(3px);
+	width: 16px;
+	height: 16px;
+	line-height: 18px;
+}
+.box-demo {
+	padding: 5px 0;
+}
+
+h4.head-toc {
+	margin-top: 40px;
+	padding-top: 20px;
+	margin-bottom: 1em;
+}
+h4.head-toc-start {
+	margin-top: 0;
+	padding-top: 0;
+}
+#nav-toc {
+	background-color: #222;
+	padding: 1.5em 2em;
+}
+#nav-toc,
+#nav-toc a {
+	color: #ccc;
+}
+#nav-toc a:hover {
+	color: #fff;
+}
+#nav-toc li {
+	border-top: 1px solid #333;
+	border-bottom-color: #000;
+}
+#nav-toc li:first-child {
+	border-top: none;
+}
+#nav-toc li:last-child {
+	border-bottom: none;
+}
+
+.page-break {
+	margin: 3em 0;
+	border-top: 2px dashed #eee;
+}
+
+.link-show-code {
+	background-color: #eee;
+	@include border-radius(10px);
+	color: #555;
+	font-size: 10px;
+	@include inline-block;
+	line-height: 1;
+	padding: 5px 11px;
+	text-decoration: none;
+}
+.link-show-code-active {
+	background-color: #444;
+	color: #fff;
+	padding: 5px 14px;
+	}
+.link-show-code:hover {
+	background-color: #ef6465;
+	color: #fff;
+	}
+
+
+.bg-lightblue {background-color:#b0c4de}
+.bg-blue {background-color:#7e9ec7}
+
+
+.head1,
+.head2,
+.head3 {
+	font-weight: normal;
+	text-align: center;
+}
+.head1 {
+	padding: 3em 0 4em 0;
+	margin: 0;
+}
+.head2 {
+	margin: 2em 0 1.5em 0;
+}
+.head3 {
+	margin: 2em 0 1em 0;
+}
+.cut {
+	margin: 6em 0;
+	color: #aaa;
+	text-align: center;
+}
+.griddemo .units-row-end,
+.griddemo .units-row {
+	background-color: #f0f0f0;
+}
+.griddemo .unit-100,
+.griddemo .unit-80,
+.griddemo .unit-75,
+.griddemo .unit-70,
+.griddemo .unit-66,
+.griddemo .unit-60,
+.griddemo .unit-50,
+.griddemo .unit-40,
+.griddemo .unit-33,
+.griddemo .unit-30,
+.griddemo .unit-25,
+.griddemo .unit-20,
+.griddemo .blocks-2 > li,
+.griddemo .blocks-3 > li,
+.griddemo .blocks-4 > li,
+.griddemo .blocks-5 > li,
+.griddemo .blocks-6 > li {
+	text-align: center;
+	font-size: 10px;
+	background-color: #7e9ec7;
+	padding: 15px 0;
+	color: rgba(255, 255, 255, 0.85);
+	line-height: 1;
+}
+.griddemo .unit-demo-zero {
+	padding: 0;
+}
+.griddemo .units-demo-light .unit-100,
+.griddemo .units-demo-light .unit-80,
+.griddemo .units-demo-light .unit-75,
+.griddemo .units-demo-light .unit-70,
+.griddemo .units-demo-light .unit-66,
+.griddemo .units-demo-light .unit-60,
+.griddemo .units-demo-light .unit-50,
+.griddemo .units-demo-light .unit-40,
+.griddemo .units-demo-light .unit-33,
+.griddemo .units-demo-light .unit-30,
+.griddemo .units-demo-light .unit-25,
+.griddemo .units-demo-light .unit-20 {
+	background-color: #b0c4de;
+}
+
+
+/* =Tablet (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #page { width: 768px; }
+}
+
+
+/* =Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+	#page { width: 300px; }
+}
+
+
+/* =Mobile (Landscape)
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#page { width: 420px; }
+}
+

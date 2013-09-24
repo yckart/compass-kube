@@ -1,5 +1,10 @@
-/* =Base, reset, normalize
+/* =Reset
 -----------------------------------------------------------------------------*/
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
 html,
 body,
 div,
@@ -86,8 +91,20 @@ h6 {
 	outline: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-	background: transparent;  
+	background: transparent;
 	font-style: normal;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+select {
+    text-transform: none;
 }
 /* Structure tags */
 article,
@@ -98,24 +115,20 @@ figure,
 footer,
 header,
 hgroup,
+main,
 nav,
-section {
+section,
+summary {
 	display: block;
 }
-/* Responsive images and other embedded objects */
-img,
-object,
-embed,
-video,
-iframe {
-	width: auto;
-	max-width: 100%;
+audio,
+canvas,
+video {
+    display: inline-block;
 }
-/* Responsive images aspect ratio */
-img,
-video,
-iframe {
-	height: auto;
+audio:not([controls]) {
+    display: none;
+    height: 0;
 }
 /* To prevent some browsers from inserting quotes on q and p */
 blockquote, q {
@@ -130,42 +143,46 @@ q:after {
 }
 /* Table reset */
 table {
-	border-collapse: collapse; 
+	border-collapse: collapse;
 	border-spacing: 0;
 }
-caption, 
-th, 
+caption,
+th,
 td {
 	text-align: left;
 	vertical-align: top;
 	font-weight: normal;
 }
-thead th, 
+thead th,
 thead td {
-	font-weight: bold; 
+	font-weight: bold;
 	vertical-align: bottom;
 }
 /* Image inside */
-a img, th img, td img {
+a img,
+th img,
+td img {
 	vertical-align: top;
 }
 /* Webkit browsers reset margin */
-button, 
-input, 
-select, 
+button,
+input,
+select,
 textarea {
 	margin: 0;
 }
 textarea {
 	overflow: auto;
+	vertical-align: top;
 }
 /* Normalize buttons in IE */
 button {
-	width: auto; overflow: visible;
+	width: auto;
+	overflow: visible;
 }
 /* Hand cursor on clickable controls */
-input[type=button],  
-input[type=submit], 
+input[type=button],
+input[type=submit],
 button {
 	cursor: pointer;
 }
@@ -174,15 +191,25 @@ input[type="radio"],
 input[type="checkbox"]
 {
 	font-size: 110%;
+    @include box-sizing(border-box);
+}
+/* Normalize search fields */
+input[type="search"] {
+	-webkit-appearance: textfield;
+	@include box-sizing(content-box);
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
 }
 /* Horizontal rule reset  */
 hr {
-	display: block; 
-	height: 1px; 
-	border: 0; 
+	display: block;
+	height: 1px;
+	border: 0;
 	border-top: 1px solid #ddd;
 }
 /* Clearfix */
 .group {
-	@include clearfixing;
+	@include pie-clearfix;
 }

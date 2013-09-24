@@ -1,136 +1,196 @@
 .btn {
-	position: relative;
-	cursor: pointer;
-	outline: none;
-	display: inline-block;
-	text-align: center;
 	text-decoration: none;
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1;
-	font-size: 13px;
-	font-weight: normal;
-	padding: 7px 16px;
-	border-radius: 4px;		
-
-	@include gradient(#fff, #e1e1e1);
-	border: 1px solid #dadada;	
-	border-left: 1px solid #d2d2d2;	
-	border-right: 1px solid #d2d2d2;			
-	border-bottom-color: #a9a9a9;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, .15), inset 0 1px 1px 0 rgba(255, 255, 255, 0.6);	
-	text-shadow: 0 1px 0px rgba(255, 255, 255, 1);
-}
-.btn, .btn:hover {
 	color: #000;
+	border-radius: 2px;
+	font-family: $buttonFontFamily;
+	border: 1px solid darken(#fff, 20);
+	border-bottom-color: darken(#fff, 30);
+	line-height: 1;
+	padding: .7em 1.1em .6em 1.1em;
+	font-weight: 500;
+	font-size: .85em;
+	@include gradient(darken(#fff, 1), darken(#fff, 12));
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	box-shadow: none;
+	&:hover {
+		color: #000;
+		background: darken(#fff, 12);
+	}
 }
-.btn:hover {
-	filter: none;
-	background: none;
-	background: #efefef;
-	text-shadow: 0 1px 0px rgba(255, 255, 255, .8);		
-	text-decoration: none;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+.btn-black {
+	border-color: #000;
+	@include gradient(lighten(#000, 30), #000);
+}
+.btn-red {
+	border-color: darken(#ef6465, 25);
+	border-bottom-color: darken(#ef6465, 35);
+	@include gradient(#ef6465, darken(#ef6465, 20));
+}
+.btn-orange {
+	border-color: darken(#f48a30, 15);
+	border-bottom-color: darken(#f48a30, 25);
+	@include gradient(#f48a30, darken(#f48a30, 10));
+}
+.btn-green {
+	border-color: darken(#90af45, 18);
+	border-bottom-color: darken(#90af45, 28);
+	@include gradient(#90af45, darken(#90af45, 15));
+}
+.btn-blue {
+	border-color: darken(#1c7ab4, 17);
+	border-bottom-color: darken(#1c7ab4, 27);
+	@include gradient(#1c7ab4, darken(#1c7ab4, 10));
+}
+.btn-yellow {
+	border-color: darken(#f3c835, 20);
+	border-bottom-color: darken(#f3c835, 30);
+	@include gradient(#f3c835, darken(#f3c835, 15));
+}
+.btn-black {
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+}
+.btn-red,
+.btn-orange,
+.btn-green,
+.btn-blue,
+.btn-yellow {
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.24);
+}
+.btn-black,
+.btn-red,
+.btn-orange,
+.btn-green,
+.btn-blue,
+.btn-yellow {
+	color: #fff;
+}
+.btn-black:hover,
+.btn-red:hover,
+.btn-orange:hover,
+.btn-green:hover,
+.btn-blue:hover,
+.btn-yellow:hover {
+	color: rgba(255, 255, 255, .8);
+}
+.btn-black:hover {
+	background: #000;
+}
+.btn-red:hover {
+	background: darken(#ef6465, 20);
+}
+.btn-orange:hover {
+	background: darken(#f48a30, 10);
+}
+.btn-green:hover {
+	background: darken(#90af45, 15);
+}
+.btn-blue:hover {
+	background: darken(#1c7ab4, 10);
+}
+.btn-yellow:hover {
+	background: darken(#f3c835, 15);
 }
 
-
-/* Active  */
-.btn-big.btn-active, .btn-big.btn-active:hover {
-	padding: 11px 25px;
-}
-.btn-active, .btn-active:hover {
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .4) inset;	
-	color: #555;
-	border: none;
-	background: none;
-	filter: none;
-	background-color: #ddd;	
-	text-shadow: 0 1px 0px rgba(255, 255, 255, .8);
-	padding: 8px 17px;		
-}
-
-
-/* Small */
 .btn-small {
-	padding: 4px 12px;
-	font-size: 11px;
+	font-size: .7em;
 }
-.btn-small.btn-active {
-	padding: 5px 12px;
-}
-
-/* Big */
 .btn-big {
-	padding: 10px 24px;
-	font-size: 20px;
+	font-size: 1.2em;
+	line-height: $baseLine / $em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
-
-
-/* Square */
-.btn-square {
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	border-radius: 0;	
-}
-
-/* Round */
 .btn-round {
-	border-radius: 15px;		
-	border-radius: 0 \0; /* ie9 hack */ 
+	border-radius: 20px;
 }
 
-/* Full */
-.btn-full {
-	width: 100%;
+.btn-active,
+.btn-active:hover,
+.btn.disabled,
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover {
+	@include opacity(100);
+	background: darken(#fff, 18);
+	border: 1px solid darken(#fff, 30);
+	text-shadow: 0 1px 1px #fff;
+}
+.btn-active,
+.btn-active:hover {
+	color: #666;
+}
+.btn.disabled,
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover {
+	color: #999;
 }
 
+.btn:focus .halflings,
+.btn:hover .halflings {
+	color: $colorGrayDark;
+}
+.btn-black:hover .halflings,
+.btn-red:hover .halflings,
+.btn-orange:hover .halflings,
+.btn-green:hover .halflings,
+.btn-blue:hover .halflings,
+.btn-yellow:hover .halflings {
+	color: rgba(255, 255, 255, .8);
+}
+.btn-disabled:hover .halflings {
+	color: #999;
+}
+
+.btn-active .halflings {
+	color: #555;
+}
 
 /* Group  */
+.btn-single,
 .btn-group {
 	display: inline-block;
 	margin-right: 2px;
-	@include clearfixing();
+	@include pie-clearfix;
 	vertical-align: bottom;
 }
-.btn-group > .btn, .btn-group > input {
+.btn-single > .btn,
+.btn-single > input,
+.btn-group > .btn,
+.btn-group > input {
 	float: left;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
 	border-radius: 0;
-	margin-left: -1px;	
+	margin-left: -1px;
+}
+.btn-single > .btn {
+	border-radius: 4px;
 }
 .btn-group > .btn:first-child {
-	border-radius: 4px 0 0 4px;	
+	border-radius: 4px 0 0 4px;
 }
 .btn-group > .btn:last-child {
 	border-radius: 0 4px 4px 0;
 }
-.btn-group > .btn.btn-round:first-child, .btn-group > .input-search:first-child {
-	border-radius: 15px 0 0 15px;	
+.btn-group > .btn.btn-round:first-child,
+.btn-group > .input-search:first-child {
+	border-radius: 15px 0 0 15px;
 }
-.btn-group > .btn.btn-round:last-child, .btn-group > .input-search:last-child {
+.btn-group > .btn.btn-round:last-child,
+.btn-group > .input-search:last-child {
 	border-radius: 0 15px 15px 0;
 }
-
+.btn-append,
+.btn-group .btn {
+	padding: 7px 1.1em 6px 1.1em;
+}
 
 /* Append  */
 .btn-append {
+	position: relative;
+	top: -1px;
 	margin-left: -2px;
 	border-radius:  0 4px 4px 0;
 }
-
-
-/* Disabled  */
-.btn.disabled, 
-.btn[disabled] {
-	border: none;
-	filter: none;	
-	background: none;
-	background-color: #e9e9e9;
-	opacity: 0.6; 
-	cursor: default; 
-	box-shadow: 0 1px 0 rgba(0, 0, 0, .6);	
-}
-
 
 /* FF fix */
 @-moz-document url-prefix("http://") {

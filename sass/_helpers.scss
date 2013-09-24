@@ -1,0 +1,90 @@
+/* =Goodies
+-----------------------------------------------------------------------------*/
+.first-letter::first-letter {
+	font-size: 4em;
+	line-height: 0.75em;
+	float: left;
+	position: relative;
+	padding-right: 6px;
+	margin-top: -2px;
+	font-weight: normal;
+	color: $colorBody;
+}
+.supersmall {
+	font-size: $superSmallFontSize;
+}
+.small {
+	font-size: $smallFontSize;
+}
+.big {
+	font-size: $bigFontSize;
+}
+input.big {
+	padding: 2px 0;
+	font-size: $bigFontSize;
+}
+.text-centered {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.zero {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.clear {
+	clear: both;
+}
+.last {
+	margin-right: 0 !important;
+}
+.pause {
+	margin-bottom: 0.75em !important;
+}
+.end {
+	margin-bottom: 0 !important;
+}
+.handle {
+	cursor: move;
+}
+.normal {
+	font-weight: normal;
+}
+.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+.req,
+.required {
+	font-weight: normal;
+	color: $colorRed;
+}
+.highlight {
+	background-color: #ffff9e !important;
+}
+.close {
+	padding: 4px 6px;
+	line-height: 1;
+	font-size: 18px;
+	cursor: pointer;
+	color: $colorBlack;
+	text-decoration: none;
+	opacity: 0.4;
+
+	&:before {
+		content: '\00D7';
+	}
+	&:hover {
+		color: $colorBlack;
+		opacity: 1;
+	}
+}

@@ -1,41 +1,65 @@
 /* =Tables
 -----------------------------------------------------------------------------*/
+tfoot th,
+tfoot td {
+	background-color: $tfootBackgroundColor;
+}
+th,
+td {
+	border-bottom: $cellBorder;
+	padding: 0.5em 0.8em;
+}
 table caption {
 	text-transform: uppercase;
-	font-weight: bold;
-	padding-left: 0.5em;
-	color: #666;
+	padding: 0 1em;
+	color: $colorGrayLight;
+	font-size: $smallFontSize;
 }
-table.simple td,
-table.simple th {
+table.table-flat td,
+table.table-flat th {
   border: none;
-  padding: (($baseLine / 2) / $em) * 1em 0.7em (($baseLine / 2) / $em) * 1em 0;
+  padding: 0;
 }
-table.bordered td,
-table.bordered th {
+table.table-simple td,
+table.table-simple th {
+  border: none;
+  padding: (($baseLine / 2) / $em) 0.7em (($baseLine / 2) / $em) 0;
+}
+table.table-simple caption {
+	padding-left: 0;
+}
+table.table-bordered td,
+table.table-bordered th {
   border: 1px solid #ddd;
 }
-table.stroked td,
-table.stroked th {
+table.table-stroked td,
+table.table-stroked th {
   border-bottom: 1px solid #eee;
 }
-table.striped tbody tr:nth-child(odd) td {
-  background-color: #f8f8f8;
+table.table-striped tbody tr:nth-child(odd) td {
+  background-color: $colorStripedTable;
 }
-table.hovered tbody tr:hover td, table.hovered thead tr:hover th {
+table.table-hovered tbody tr:hover td,
+table.table-hovered thead tr:hover th {
 	background-color: $colorHoveredTable;
 }
 
-.thead-gray td, .thead-gray th {
-	background-color: #f0f0f0;
+/* Responsive Tables */
+.table-container {
+	width: 100%;
+	overflow: auto;
+	margin-bottom: $baseLine/$em;
 }
-.thead-black td, .thead-black th {
-	font-weight: normal;	
-	color: #f6f6f6;
-	color: rgba(255, 255, 255, .9);
-	background-color: #222;
+.table-container table {
+	margin-bottom: 0;
 }
-table.bordered .thead-black td,
-table.bordered .thead-black th {
-	border: 1px solid #444;	
+.table-container::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
+}
+.table-container::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	border: 3px solid #fff;
+	background-color: rgba(0, 0, 0, .3);
 }

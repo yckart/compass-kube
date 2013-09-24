@@ -1,0 +1,52 @@
+/* =Colors
+-----------------------------------------------------------------------------*/
+.color-black {
+	color: $colorBlack;
+}
+.color-gray-dark {
+	color: $colorGrayDark;
+}
+.color-gray {
+	color: $colorGray;
+}
+.color-gray-light {
+	color: $colorGrayLight;
+}
+.color-white {
+	color: $colorWhite;
+}
+.color-red,
+.error {
+	color: $colorRed;
+}
+.color-green,
+.success {
+	color: $colorGreen;
+}
+.color-orange {
+	color: $colorOrange;
+}
+.color-green {
+	color: $colorGreen;
+}
+.color-blue {
+	color: $colorBlue;
+}
+.color-yellow {
+	color: $colorYellow;
+}
+
+/* Link Colors Hover */
+a.color-white:focus,
+a.color-white:hover {
+	color: darken($colorWhite, 25%);
+	color: rgba(255, 255, 255, .6);
+}
+a.color-green:focus,
+a.color-green:hover,
+a.color-red:focus,
+a.color-red:hover,
+a.color-error:focus,
+a.color-error:hover  {
+	color: $colorBlack;
+}
